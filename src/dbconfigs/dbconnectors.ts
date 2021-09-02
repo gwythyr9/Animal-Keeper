@@ -3,7 +3,7 @@ import { Pool } from 'pg';
 const pool = new Pool ({
     max: 20,
     //connectionString: 'postgres://root:newPassword@localhost:port/dbname',
-    connectionString: 'postgres://postgres:newPassword@postgres:5432/todo-db',
+    connectionString: 'postgres://postgres:changeme@postgres:5432',
     idleTimeoutMillis: 30000
 });
 
