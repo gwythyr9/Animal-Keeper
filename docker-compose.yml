@@ -8,7 +8,7 @@ services:
     depends_on:
       - postgres
     environment:
-      DATABASE_URL: postgres://postgres:newPassword@postgres:5432/todo-db
+      DATABASE_URL: postgres://postgres:newPassword@postgres:5433/AnimalKeeper
       NODE_ENV: development
       PORT: 4000
     ports:
@@ -17,7 +17,7 @@ services:
     container_name: postgres
     image: postgres:13.4
     ports:
-      - "5432:5432"
+      - "5433:5433"
     volumes: 
       - ./postgresdata:/var/lib/postgresql/data
       - ./src/migrations/dbinit.sql:/docker-entrypoint-initdb.d/dbinit.sql
@@ -25,7 +25,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: newPassword
-      POSTGRES_DB: todo-db
+      POSTGRES_DB: AnimalKeeper
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4:5.6

@@ -1,11 +1,21 @@
 {
   "compilerOptions": {
-  "module": "commonjs",
-  "esModuleInterop": true,
-  "target": "es6",
-  "moduleResolution": "node",
-  "sourceMap": true,
-  "outDir": "dist/src"
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist/src",
+		"downlevelIteration": true,
+		"allowSyntheticDefaultImports": true,
+		"importHelpers": true,
+		"noEmitOnError": true,
+		"strict": false,
+		"alwaysStrict": false,
+    "noUnusedLocals": true,
+		"typeRoots": ["node_modules/@types/"]
  },
   "lib": ["es2015"]
  }
